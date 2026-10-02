@@ -467,14 +467,14 @@
         }
         
         function formatTanggalHijriah(tanggal) {
-            const date = new Date(tanggal + "T00:00:00");
-        
-            return new Intl.DateTimeFormat("id-ID-u-ca-islamic", {
-                day: "numeric",
-                month: "long"
-            }).format(date);
-        }
-        
+    const date = new Date(tanggal + "T00:00:00");
+
+    return new Intl.DateTimeFormat("id-ID-u-ca-islamic-umalqura", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    }).format(date);
+}
         function formatTanggalTaiwan(tanggal) {
             const date = new Date(tanggal + "T00:00:00");
         
