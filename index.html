@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Sakinah Taiwan</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center mt-3">
+            <h1>SERTIFIKAT IJAB</h1>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body mt-3">
+          <form id="certificateForm">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <label for="datewedd" class="col-sm-4 col-form-label">Tgl Pernikahan</label>
+                  <div class="col-sm-8">
+                    <input type="date" class="form-control" id="datewedd">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <label for="lokasi" class="col-sm-4 col-form-label">Lokasi</label>
+                  <div class="col-sm-8">
+                    <select class="form-select" id="location">
+                      <option selected>Pilih Lokasi Ijab...</option>
+
+                      <option value="Taipei">Taipei</option>
+                      <option value="Xinbei">Xinbei </option>
+                      <option value="Taichung">Taichung</option>
+                      <option value="Tainan">Tainan</option>
+                      <option value="Kaohsiung">Kaohsiung</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <br>
+  
+              <div class="row mb-3">
+                  <label for="mahar" class="col-sm-2 col-form-label">Mahar</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="mahar">
+                  </div>
+              </div>
+  
+              <div class="row mb-3">
+                  <label for="saksi1" class="col-sm-2 col-form-label">Saksi 1</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="saksi1">
+                  </div>
+              </div>
+  
+              <div class="row mb-3">
+                  <label for="saksi2" class="col-sm-2 col-form-label">Saksi 2</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="saksi2">
+                  </div>
+              </div>
+  
+              <br>
+  
+              <h3>DATA MEMPELAI PRIA</h3>
+              
+              <br>
+  
+              <div class="row mb-3">
+                <label for="namemp" class="col-sm-2 col-form-label">Nama</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="namemp">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="fathermp" class="col-sm-2 col-form-label">Nama Ayah</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="fathermp">
+                </div>
+              </div>
+  
+              
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="row">
+                  <label for="pobmp" class="col-sm-4 col-form-label">Tempat Lahir</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="pobmp">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="row">
+                  <label for="dobmp" class="col-sm-4 col-form-label">Tgl Lahir</label>
+                  <div class="col-sm-8">
+                    <input type="date" class="form-control" id="dobmp">
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <br>
+  
+  
+            <div class="row mb-3">
+              <label for="addressmp" class="col-sm-2 col-form-label">Alamat</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="addressmp" rows="2"></textarea>
+              </div>
+          </div>
+
+              <div class="input-group mb-3">
+                  <label for="photomp" class="col-sm-2 col-form-label">Foto Pria</label>
+                  <input type="file" class="form-control" id="photomp">
+                  <label class="input-group-text" for="photomp">Upload</label>
+              </div>
+            
+              <br>
+  
+              <h3>DATA MEMPELAI WANITA</h3>
+              
+              <br>
+  
+              <div class="row mb-3">
+                <label for="namemw" class="col-sm-2 col-form-label">Nama</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="namemw">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="fathermw" class="col-sm-2 col-form-label">Nama Ayah</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="fathermw">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <label for="pobmw" class="col-sm-4 col-form-label">Tempat Lahir</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="pobmw">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <label for="dobmw" class="col-sm-4 col-form-label">Tgl Lahir</label>
+                    <div class="col-sm-8">
+                      <input type="date" class="form-control" id="dobmw">
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <br>
+  
+              <div class="row mb-3">
+                  <label for="addressmw" class="col-sm-2 col-form-label">Alamat</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="addressmw" rows="2"></textarea>
+                  </div>
+              </div>
+  
+              <div class="input-group mb-3">
+                  <label for="photomw" class="col-sm-2 col-form-label">Foto Wanita</label>
+                  <input type="file" class="form-control" id="photomw">
+                  <label class="input-group-text" for="photomw">Upload</label>
+              </div>
+              <br>
+  
+              <h3>DATA WALI</h3>
+              
+              <br>
+  
+              <div class="row mb-3">
+                <label for="namewali" class="col-sm-2 col-form-label">Nama</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="namewali">
+                </div>
+              </div>
+              <div class="row mb-3">
+                  <label for="addresswali" class="col-sm-2 col-form-label">Alamat</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="addresswali" rows="2"></textarea>
+                  </div>
+              </div>
+              <div class="row mb-3">
+                  <label for="hubungan" class="col-sm-2 col-form-label">Hubungan</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="hubungan">
+                  </div>
+              </div>
+  
+              <br>
+  
+              <div class="row">
+                <div class="col text-end">
+                  <button class="btn btn-primary" type="submit">Create</button>
+                </div>
+              </div>
+  
+          </form>
+
+          <script>
+            const form = document.getElementById("certificateForm");
+            
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+            
+                const fotoPria = document.getElementById("photomp").files[0];
+                const fotoWanita = document.getElementById("photomw").files[0];
+            
+                const readerPria = new FileReader();
+                const readerWanita = new FileReader();
+            
+                readerPria.onload = function () {
+                    readerWanita.onload = function () {
+            
+                        const certificateData = {
+                            tanggalPernikahan: document.getElementById("datewedd").value,
+                            lokasi: document.getElementById("location").value,
+            
+                            mahar: document.getElementById("mahar").value,
+                            saksi1: document.getElementById("saksi1").value,
+                            saksi2: document.getElementById("saksi2").value,
+            
+                            mempelaiPria: {
+                                nama: document.getElementById("namemp").value,
+                                namaAyah: document.getElementById("fathermp").value,
+                                tempatLahir: document.getElementById("pobmp").value,
+                                tanggalLahir: document.getElementById("dobmp").value,
+                                alamat: document.getElementById("addressmp").value,
+                                foto: readerPria.result
+                            },
+            
+                            mempelaiWanita: {
+                                nama: document.getElementById("namemw").value,
+                                namaAyah: document.getElementById("fathermw").value,
+                                tempatLahir: document.getElementById("pobmw").value,
+                                tanggalLahir: document.getElementById("dobmw").value,
+                                alamat: document.getElementById("addressmw").value,
+                                foto: readerWanita.result
+                            },
+            
+                            wali: {
+                                nama: document.getElementById("namewali").value,
+                                alamat: document.getElementById("addresswali").value,
+                                hubungan: document.getElementById("hubungan").value
+                            }
+                        };
+            
+                        sessionStorage.setItem(
+                            "certificateData",
+                            JSON.stringify(certificateData)
+                        );
+            
+                        window.location.href = "certificate.html";
+                    };
+            
+                    if (fotoWanita) {
+                        readerWanita.readAsDataURL(fotoWanita);
+                    } else {
+                        readerWanita.onload();
+                    }
+                };
+            
+                if (fotoPria) {
+                    readerPria.readAsDataURL(fotoPria);
+                } else {
+                    readerPria.onload();
+                }
+            });
+            </script>
+
+        </div>
+      </div>
+            <br>
+
+
+    </div>
+
+
+</body>
+</html>

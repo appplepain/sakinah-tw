@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lancelot">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+    
+    body {
+    margin: 0;
+    background: #ddd;
+    font-family: "Lancelot";
+    color:  #ffec4e;
+    /* # */
+    }
+
+    .certificate {
+        position: relative;
+
+        width: 210mm;
+        height: 297mm;
+
+        margin: 20px auto;
+
+        background-image: url("assets/bg1.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+
+        .certificate-title {
+        position: absolute;
+        top: 14mm;
+        left: 25mm;
+        right: 25mm;
+        bottom: 25mm;
+
+        text-align: center;
+        }
+
+        .certificate-loc {
+        position: absolute;
+        top: 34mm;
+        left: 21mm;
+        right: 25mm;
+        text-align: justify;
+    }   
+
+    .certificate-loc p {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+        .certificate-data {
+        position: absolute;
+        top: 49mm;
+        left: 21mm;
+        right: 25mm;
+        }
+
+    .certificate-male,
+    .certificate-sub1,
+    .certificate-female,
+    .certificate-sub2,
+    .certificate-wali {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        text-align: justify;
+        margin-top: 1mm;
+    }
+
+    .certificate-sub1 {
+        margin-top: 1mm;
+    }
+
+    .certificate-female {
+        margin-top: 1mm;
+    }
+
+    .certificate-sub2 {
+        margin-top: 1mm;
+    }
+
+
+    .male-data {
+    width: 630px;
+    border-collapse: collapse;
+}
+
+.wali-data {
+    width: 600px;
+    border-collapse: collapse;
+}
+
+.male-data td,
+.wali-data td {
+    padding: 0;
+    vertical-align: top;
+}
+
+.male-data .label,
+.wali-data .label {
+    width: 190px;
+    font-size: 16.7px;
+}
+
+.male-data .value {
+    width: 300px;
+    font-size:  16.7px;
+}
+
+.wali-data .value {
+    width: 450px;
+    font-size:  16.7px;
+}
+
+.male-data .photo {
+    width: 140px;
+    text-align: right;
+    vertical-align: top;
+    transform: translateX(25px);
+}
+
+.photo-frame {
+    width: 150px;
+    height: 176px;
+    position: relative;
+}
+
+.photo-user {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.address {
+    white-space: pre-line;
+}
+
+    .signature-area {
+    position: absolute;
+    top: 206mm;
+    left: 25mm;
+    right: 25mm;
+
+    display: grid;
+    margin-top: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    align-items: start;
+    }
+
+    .husband {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+
+    .wife {
+        grid-column: 3;
+        grid-row: 1;
+        text-align: middle;
+    }
+
+    .signature-box {
+        grid-column: 1 / 4;
+        grid-row: 2;
+
+        width: 550px;
+        height: 210px;
+        background-color: #ffff;
+        border: 3px solid #d89b3c;
+        border-radius: 5mm;
+
+        position: relative;
+        box-sizing: border-box;
+        justify-self: center;
+    }
+
+    .signature-box::before {
+        content: "";
+        position: absolute;
+
+        top: 50%;
+        left: 0;
+
+        width: calc(50% - 18mm);
+        height: 1px;
+
+        background-color: #d89b3c;
+    }
+
+    .signature-box::after {
+        content: "";
+        position: absolute;
+
+        top: 50%;
+        right: 0;
+
+        width: calc(50% - 18mm);
+        height: 1px;
+
+        background-color: #d89b3c;
+    }
+
+    .wali1 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .penghulu {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .wali2 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .signature-name p {
+        margin: 0;
+        font-size: 16.7px;
+    }
+
+    @media print {
+
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 210mm;
+        height: 297mm;
+    }
+
+    .certificate {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        page-break-after: avoid;
+        break-after: avoid;
+        background-image: url("assets/bg1.png");
+    }
+
+    body {
+        background: none;
+    }
+    }
+    </style>
+    
+    <title>SertifikatSakinahTaiwan.pdf</title>
+</head>
+
+<body>
+    
+    <div class="certificate">
+        <div class="certificate-title">
+                <p style="font-size: 33.13px; margin-bottom: 0; height: 35px;">Sertifikat Akad Nikah</p>
+                <p style="font-size: 21px;">婚姻證書摘錄</p>
+         </div>
+
+         <div class="certificate-loc">
+            <p style="font-size:  16.7px;">Akad nikah telah terlaksana pada tanggal <span id="datewedd"></span> atau <span id="dateHijriah"></span> di <span id="location"></span>, Taiwan.  
+                Sertifikat ini diberikan kepada/茲證明婚姻契約已於<span id="dateTaiwan"></span>在<span id="locationHanzi"></span>正式舉行</p>
+         </div>
+
+        <div class="certificate-data">
+            <div class="certificate-male">
+                <table class="male-data">
+                    <tr>
+                        <td class="label">Nama/全名</td>
+                        <td class="value">: <span id="namemp"></span></td>
+                        <td class="photo" rowspan="6">
+                            <div class="photo-frame">
+                                <img id="fotoPria" class="photo-user" alt="Foto Pria">
+                            </div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td class="label">Nama Ayah/父親姓名</td>
+                        <td class="value">: <span id="fathermp"></span></td>
+                    </tr>
+            
+                    <tr>
+                        <td class="label">TTL/出生地及日期</td>
+                        <td class="value">: <span id="maleBirth"></span>
+                            (<span id="maleBirthChinese"></span>)</td>
+                    </tr>
+            
+                    <tr>
+                        <td class="label">Kewarganegaraan/國籍</td>
+                        <td class="value">: Indonesia/印尼</td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Agama/宗教</td>
+                        <td class="value">: Islam/伊斯蘭教</td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Alamat (KTP)/地址</td>
+                        <td class="value">: <span id="addressmp" class="address"></span> </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="certificate-sub1">
+                <p style="font-size:  16.7px; margin-bottom: 3px;">yang menikahi seorang perempuan/與一名女子結婚: </p>
+            </div>
+
+            <div class="certificate-female">
+                <table class="male-data">
+                    <tr>
+                        <td class="label">Nama/全名</td>
+                        <td class="value">: <span id="namemw"></span></td>
+                        <td class="photo" rowspan="6">
+                            <div class="photo-frame">
+                                <img id="fotoWanita" class="photo-user" alt="Foto Wanita">
+                            </div>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td class="label">Nama Ayah/父親姓名</td>
+                        <td class="value">: <span id="fathermw"></span></td>
+                    </tr>
+            
+                    <tr>
+                        <td class="label">TTL/出生地及日期</td>
+                        <td class="value">: <span id="femaleBirth"></span>
+                            (<span id="femaleBirthChinese"></span>)</td>
+                    </tr>
+            
+                    <tr>
+                        <td class="label">Kewarganegaraan/國籍</td>
+                        <td class="value">: Indonesia/印尼</td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Agama/宗教</td>
+                        <td class="value">: Islam/伊斯蘭教</td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Alamat (KTP)/地址</td>
+                        <td class="value">: <span id="addressmw" class="address"></span> </span></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="certificate-sub2">
+                <p style="font-size:  16.7px; margin-bottom: 3px;">dengan persetujuan dari wali/經婚姻監護人同意 </p>
+            </div>
+
+            <div class="certificate-wali">
+                <table class="wali-data">
+                    <tr>
+                        <td class="label">Nama/全名</td>
+                        <td class="value">: <span id="namewali"></span></td>
+                    </tr>
+            
+                    <tr>
+                        <td class="label">Kewarganegaraan/國籍</td>
+                        <td class="value">: Indonesia/印尼</td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Agama/宗教</td>
+                        <td class="value">: Islam/伊斯蘭教</td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Alamat (KTP)/地址</td>
+                        <td class="value">: <span id="addresswali" class="address"></span> </td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">Hubungan/關係</td>
+                        <td class="value">: <span id="hubungan"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="label">dengan mahar berupa/聘為</td>
+                        <td class="value">: <span id="mahar"></span></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+
+            <div class="signature-area">
+                <div class="signature-name husband">
+                    <span>Suami/丈夫, </span>
+                    <span id="signatureHusband"></span>
+                </div>
+            
+                <div class="signature-name wife">
+                    <span>Istri/妻子, </span>
+                    <span id="signatureWife"></span>
+                </div>
+
+                <div class="signature-box">
+                </div>
+            
+                <div class="signature-name wali1">
+                    <span>Saksi pertama/第一證人</span>
+                    <p id="signatureSaksi1"></p>
+                </div>
+            
+                <div class="signature-name penghulu">
+                    <p>Penghulu/主婚人: </p>
+                    <p>Furqanuddin (0967034389)</p>
+                </div>
+            
+                <div class="signature-name wali2">
+                    <span>Saksi kedua/第二證人</span>
+                    <p id="signatureSaksi2"></p>
+                </div>
+            
+            </div>
+
+    </div>
+
+
+
+    <script>
+        function formatTanggalIndonesia(tanggal) {
+            const bulan = [
+                "Januari", "Februari", "Maret", "April",
+                "Mei", "Juni", "Juli", "Agustus",
+                "September", "Oktober", "November", "Desember"
+            ];
+        
+            const date = new Date(tanggal + "T00:00:00");
+        
+            return `${date.getDate()} ${bulan[date.getMonth()]} ${date.getFullYear()}`;
+        }
+        
+        function formatTanggalLahir(tanggal) {
+            const date = new Date(tanggal + "T00:00:00");
+        
+            const hari = String(date.getDate()).padStart(2, "0");
+            const bulan = String(date.getMonth() + 1).padStart(2, "0");
+            const tahun = date.getFullYear();
+        
+            return `${hari}/${bulan}/${tahun}`;
+        }
+        
+        function formatTanggalHijriah(tanggal) {
+            const date = new Date(tanggal + "T00:00:00");
+        
+            return new Intl.DateTimeFormat("id-ID-u-ca-islamic", {
+                day: "numeric",
+                month: "long"
+            }).format(date);
+        }
+        
+        function formatTanggalTaiwan(tanggal) {
+            const date = new Date(tanggal + "T00:00:00");
+        
+            const tahun = date.getFullYear();
+            const bulan = date.getMonth() + 1;
+            const hari = date.getDate();
+        
+            return `${tahun}年${bulan}月${hari}日`;
+        }
+        
+        const kotaHanzi = {
+            "Taipei": "台北市",
+            "Taipei City": "台北市",
+            "Taiwan": "台灣",
+            "Taichung": "台中市",
+            "Tainan": "台南市",
+            "Kaohsiung": "高雄市"
+        };
+        
+        
+        window.addEventListener("DOMContentLoaded", function () {
+        
+            const certificateData = JSON.parse(
+                sessionStorage.getItem("certificateData")
+            );
+        
+            const locationHanzi =
+                kotaHanzi[certificateData.lokasi] || certificateData.lokasi;
+        
+            const fotoPria = document.getElementById("fotoPria");
+        
+            if (fotoPria && certificateData.mempelaiPria.foto) {
+                fotoPria.src = certificateData.mempelaiPria.foto;
+            }
+        
+            const fotoWanita = document.getElementById("fotoWanita");
+        
+            if (fotoWanita && certificateData.mempelaiWanita.foto) {
+                fotoWanita.src = certificateData.mempelaiWanita.foto;
+            }
+        
+            document.getElementById("datewedd").textContent =
+                formatTanggalIndonesia(certificateData.tanggalPernikahan);
+        
+            document.getElementById("dateHijriah").textContent =
+                formatTanggalHijriah(certificateData.tanggalPernikahan);
+        
+            document.getElementById("dateTaiwan").textContent =
+                formatTanggalTaiwan(certificateData.tanggalPernikahan);
+        
+            document.getElementById("location").textContent =
+                certificateData.lokasi;
+        
+            document.getElementById("locationHanzi").textContent =
+                locationHanzi;
+        
+            document.getElementById("namemp").textContent =
+                certificateData.mempelaiPria.nama;
+        
+            document.getElementById("fathermp").textContent =
+                certificateData.mempelaiPria.namaAyah;
+        
+            document.getElementById("maleBirth").textContent =
+                certificateData.mempelaiPria.tempatLahir + ", " +
+                formatTanggalLahir(
+                    certificateData.mempelaiPria.tanggalLahir
+                );
+        
+            document.getElementById("maleBirthChinese").textContent =
+                formatTanggalTaiwan(
+                    certificateData.mempelaiPria.tanggalLahir
+                );
+        
+            document.getElementById("addressmp").textContent =
+                certificateData.mempelaiPria.alamat;
+        
+            document.getElementById("namemw").textContent =
+                certificateData.mempelaiWanita.nama;
+        
+            document.getElementById("fathermw").textContent =
+                certificateData.mempelaiWanita.namaAyah;
+        
+            document.getElementById("femaleBirth").textContent =
+                certificateData.mempelaiWanita.tempatLahir + ", " +
+                formatTanggalLahir(
+                    certificateData.mempelaiWanita.tanggalLahir
+                );
+        
+            document.getElementById("femaleBirthChinese").textContent =
+                formatTanggalTaiwan(
+                    certificateData.mempelaiWanita.tanggalLahir
+                );
+        
+            document.getElementById("addressmw").textContent =
+                certificateData.mempelaiWanita.alamat;
+        
+            document.getElementById("namewali").textContent =
+                certificateData.wali.nama;
+        
+            document.getElementById("addresswali").textContent =
+                certificateData.wali.alamat;
+        
+            document.getElementById("hubungan").textContent =
+                certificateData.wali.hubungan;
+        
+            document.getElementById("mahar").textContent =
+                certificateData.mahar;
+        
+            document.getElementById("signatureHusband").textContent =
+                certificateData.mempelaiPria.nama;
+        
+            document.getElementById("signatureWife").textContent =
+                certificateData.mempelaiWanita.nama;
+        
+            document.getElementById("signatureSaksi1").textContent =
+                certificateData.saksi1;
+        
+            document.getElementById("signatureSaksi2").textContent =
+                certificateData.saksi2;
+
+                setTimeout(function () {
+                window.print();
+            }, 800);
+        });
+        </script>
+
+
+
+</body>
+</html>
