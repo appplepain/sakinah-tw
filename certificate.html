@@ -15,19 +15,25 @@
     /* # */
     }
 
-    .certificate {
-        position: relative;
 
-        width: 210mm;
-        height: 297mm;
+        .certificate {
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    margin: 20px auto;
+    overflow: hidden;
+}
 
-        margin: 20px auto;
-
-        background-image: url("assets/bg1.png");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        }
+.certificate-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+    pointer-events: none;
+}
 
         .certificate-title {
         position: absolute;
@@ -265,6 +271,7 @@
 <body>
     
     <div class="certificate">
+        <img src="assets/bg1.png" class="certificate-bg" alt="">
         <div class="certificate-title">
                 <p style="font-size: 33.13px; margin-bottom: 0; height: 35px;">Sertifikat Akad Nikah</p>
                 <p style="font-size: 21px;">婚姻證書摘錄</p>
