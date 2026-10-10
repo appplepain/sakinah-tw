@@ -162,12 +162,6 @@
     align-items: start;
     }
 
-    .husband {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-
     .wife {
         grid-column: 3;
         grid-row: 1;
@@ -229,11 +223,20 @@
         grid-column: 3;
         grid-row: 3;
     }
+        
+.husband {
+    grid-column: 1;
+    grid-row: 1;
+    white-space: nowrap;
+    font-size: 15.5px;
+    max-width: 100%;
+}
 
-    .signature-name p {
-        margin: 0;
-        font-size: 15.5px;
-    }
+.signature-name p {
+    margin: 0;
+    font-size: 15.5px;
+    white-space: nowrap;
+}
 
     
 @media print {
