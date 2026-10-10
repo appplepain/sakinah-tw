@@ -235,7 +235,8 @@
         font-size: 16.7px;
     }
 
-    @media print {
+    
+@media print {
 
     @page {
         size: A4 portrait;
@@ -244,25 +245,37 @@
 
     html,
     body {
-        margin: 0;
-        padding: 0;
+        margin: 0 !important;
+        padding: 0 !important;
         width: 210mm;
         height: 297mm;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
     .certificate {
         width: 210mm;
         height: 297mm;
-        margin: 0;
-        page-break-after: avoid;
-        break-after: avoid;
-        background-image: url("assets/bg1.png");
-    }
+        min-height: 0;
+        margin: 0 !important;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
 
-    body {
-        background: none;
+        page-break-before: avoid;
+        page-break-after: avoid;
+        break-before: avoid;
+        break-after: avoid;
+
+        background-image: url("assets/bg1.png");
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
     }
-    }
+}
     </style>
     
     <title>SertifikatSakinahTaiwan.pdf</title>
@@ -278,7 +291,7 @@
          </div>
 
          <div class="certificate-loc">
-            <p style="font-size:  16.5px;">Akad nikah telah terlaksana pada tanggal <span id="datewedd"></span> atau <span id="dateHijriah"></span> di <span id="location"></span>, Taiwan.  
+            <p style="font-size:  16.3px;">Akad nikah telah terlaksana pada tanggal <span id="datewedd"></span> atau <span id="dateHijriah"></span> di <span id="location"></span>, Taiwan.  
                 Sertifikat ini diberikan kepada/茲證明婚姻契約已於<span id="dateTaiwan"></span>在<span id="locationHanzi"></span>正式舉行</p>
          </div>
 
